@@ -1,0 +1,56 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-paper: var(--paper);
+  --color-surface: var(--surface);
+  --color-bone: var(--bone);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-vital: var(--vital);
+  --color-forest: var(--forest);
+  --color-forest-2: var(--forest-2);
+  --color-alert: var(--alert);
+  --font-sans: "Inter Variable", system-ui, sans-serif;
+  --font-display: "Montserrat Variable", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+}
+
+:root {
+  --ink: #0a0a0c;
+  --paper: #f2f2f4;
+  --surface: #ffffff;
+  --bone: #fafaf8;
+  --muted: #6e6e78;
+  --line: #dadae0;
+  --vital: #c7f36b;
+  --forest: #10241c;
+  --forest-2: #17352a;
+  --alert: #d82424;
+}
+
+.dark {
+  --ink: #f2f2f4;
+  --paper: #08080a;
+  --surface: #101014;
+  --bone: #141418;
+  --muted: #a0a0ab;
+  --line: #2e2e36;
+  --vital: #c7f36b;
+  --forest: #0e2a23;
+  --forest-2: #153229;
+  --alert: #ff5a3c;
+}
+
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: var(--vital);
+  color: var(--ink);
+}
